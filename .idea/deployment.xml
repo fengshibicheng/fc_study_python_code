@@ -58,6 +58,20 @@
           </mappings>
         </serverdata>
       </paths>
+      <paths name="root@connect.westc.gpuhub.com:51675 password">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@connect.westc.seetacloud.com:51675">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="root@qins5e2hg6rxwfzrsnow.deepln.com:40942">
         <serverdata>
           <mappings>

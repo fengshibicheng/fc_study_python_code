@@ -12,8 +12,10 @@ loader= CSVLoader(
     csv_args={
         "delimiter": ",",   # 指定分隔符
         "quotechar": '"',  # 指定带有分割符文本的引号包围是单引号还是双引号
+        # 如果数据原本有表头，就不需要fieldnames，如果有的话就不用加入filedname这个字典
+        "fieldnames": ['a', 'b', 'c', 'd']
     },
-    encoding='utf-8',   # window状态下，指定编码为utf-8
+    encoding='utf-8'   # window状态下，指定编码为utf-8
 )
 
 #=============方法一，适用内存大的方式===============================
