@@ -9,16 +9,19 @@ from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_community.embeddings import DashScopeEmbeddings
 from langchain_community.document_loaders import CSVLoader
 
+# 文本向量转换器，阿里达摩院
 vector_store = InMemoryVectorStore(
     embedding = DashScopeEmbeddings()
 )
 
+# 创建读取csvloader文件读取器
 loader = CSVLoader(
     file_path="./data/info.csv",
     encoding="utf-8",
     source_column="source"  # 指定本条数据来源是哪里
 )
 
+# 读取文件
 document = loader.load()
 
 
