@@ -6,7 +6,7 @@
 @IDE ： PyCharm
 """
 from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_community.embeddings import DashScopeEmbeddings
+from langchain_community.embeddings.dashscope import DashScopeEmbeddings
 from langchain_community.document_loaders import CSVLoader
 
 # 文本向量转换器，阿里达摩院

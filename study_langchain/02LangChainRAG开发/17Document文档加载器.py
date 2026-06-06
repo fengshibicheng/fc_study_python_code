@@ -9,7 +9,7 @@ from langchain_community.document_loaders import CSVLoader, JSONLoader, PDFPlumb
 # CSV loader 的使用
 loader= CSVLoader(
     file_path = './data/stu.csv',
-    csv_args={
+    csv_args = {
         "delimiter": ",",   # 指定分隔符
         "quotechar": '"',  # 指定带有分割符文本的引号包围是单引号还是双引号
         # 如果数据原本有表头，就不需要fieldnames，如果有的话就不用加入filedname这个字典

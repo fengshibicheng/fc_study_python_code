@@ -7,7 +7,7 @@
 """
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
-from langchain_core.runnables import RunnableLambda
+from langchain_core.runnables import RunnableLambda   # 匿名函数
 from langchain_community.chat_models.tongyi import ChatTongyi
 
 # 1、定义模型
@@ -16,6 +16,7 @@ model = ChatTongyi(model = "qwen3-max")
 # 2、作为两个模型中间的格式处理转换
 str_parser = StrOutputParser()
 json_parser = JsonOutputParser()
+
 # 函数的入参是 AI message, 返回应该是 dict；   注意这里字典接收的信息应该是名字，要有.content
 my_func = RunnableLambda(lambda ai_message: {"name": ai_message.content})
 

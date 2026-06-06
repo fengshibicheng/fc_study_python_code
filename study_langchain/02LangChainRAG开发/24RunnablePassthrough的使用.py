@@ -16,9 +16,9 @@
 from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain_community.chat_models.tongyi import ChatTongyi
 from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_community.embeddings import DashScopeEmbeddings
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
+from langchain_community.embeddings.dashscope import DashScopeEmbeddings
+from langchain_core.prompts import ChatPromptTemplate, PromptTemplate, FewShotPromptTemplate
+from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 
 # 1、创建聊天模型
 model = ChatTongyi(model = "qwen3-max")
@@ -56,10 +56,15 @@ def format_func(docs):
     if not docs:
         return "无相关参考资料"
 
-    formatted_str = "["
-    for doc in docs:
-        formatted_str += doc.page_content
-    formatted_str += "]"
+    # 方法一
+    # formatted_str = "["
+    # for doc in docs:
+    #     formatted_str += doc.page_content
+    # formatted_str += "]"
+
+    # 方法二
+    doc_page_content = [doc.page_content for doc in docs]
+    formatted_str = "[" + "\t".join(doc_page_content) + "]"
 
     return formatted_str
 
@@ -67,9 +72,8 @@ def format_func(docs):
 format_runnable = RunnableLambda(format_func)
 
 # chain
-chain = (
-    {"input": RunnablePassthrough(), "context": retriever | format_runnable} | prompt | print_prompt | model | StrOutputParser()
-)
+chain = {"input": RunnablePassthrough(),  # RunnablePassthrough 用户原问题原样保留
+         "context": retriever | format_runnable} | prompt | print_prompt | model | StrOutputParser()
 
 result = chain.invoke(input_text)
 print(result)
@@ -80,4 +84,18 @@ retriever:
 prompt:
     - 输入：用户的提问 + 向量库的检索结果  dict
     - 输出：完整的提示词                PromptValue
+"""
+
+"""
+23向量检索构建提示词.py（链一） 和 24RunnablePassthrough的使用的区别（链二）
+场景  	        手动传 context (你的链一)	        retriever 自动生成 (链二)
+检索在哪	        链条外部，自己写查询代码	            链条内部，框架自动检索
+invoke 传参	    必须手动构造context字段	        只需要传input，context 自动生成
+批量 / 接口	    每次调用前都要手动查文档，冗余	    封装完毕，调用即自动查，适合接口项目
+
+
+手动传 context：
+    临时调试、自定义特殊检索逻辑、自己控制检索规则
+retriever 链条：    
+    正式 RAG 项目、接口部署、大批量问答，少写重复代码
 """

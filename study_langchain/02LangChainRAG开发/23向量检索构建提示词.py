@@ -15,9 +15,9 @@
 """
 from langchain_community.chat_models.tongyi import ChatTongyi
 from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_community.embeddings import DashScopeEmbeddings
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
+from langchain_community.embeddings.dashscope import DashScopeEmbeddings
+from langchain_core.prompts import ChatPromptTemplate, PromptTemplate, FewShotPromptTemplate
+from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 
 # 1、创建聊天模型
 model = ChatTongyi(model = "qwen3-max")
@@ -44,10 +44,15 @@ input_text = "怎么减肥？"
 # 检索向量库  相似度搜索
 result = vector_store.similarity_search(input_text, k=2)
 
-reference_text = "["
-for doc in result:
-    reference_text += doc.page_content
-reference_text = "]"
+# # 方法一，两个文本之间，没有分隔符
+# reference_text = "["
+# for doc in result:
+#     reference_text += doc.page_content
+# reference_text += "]"
+
+# 方法二，文档之间用换行隔开，LLM更容易区分不同参考片段  "\t" 表示制表符； “\n” 表示换行符
+contents = [doc.page_content for doc in result]
+reference_text = "[" + "\t".join(contents) +"]"
 
 # print(reference_text)
 

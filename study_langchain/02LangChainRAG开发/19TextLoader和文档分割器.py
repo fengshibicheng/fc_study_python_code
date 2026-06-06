@@ -16,7 +16,10 @@ RecursiveCharacterTextSplitter递归字符文本分割器，是LangChain官方�
 from langchain_community.document_loaders import TextLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter  # 递归文档分割器
 
-loader = TextLoader(file_path="./data/python基础语法.txt", encoding="utf-8")
+loader = TextLoader(
+    file_path="./data/python基础语法.txt",
+    encoding="utf-8"
+)
 
 docs = loader.load()       # [Document]
 

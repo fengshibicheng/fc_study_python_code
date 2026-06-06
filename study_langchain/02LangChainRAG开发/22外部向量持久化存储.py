@@ -19,8 +19,8 @@ LangChain内提供向量存储功能，可以基于：
 Query text ——> Embedding model ——转换> Query vector ——> Similarity Search ——匹配> Vector stores
 """
 from langchain_core.vectorstores import InMemoryVectorStore
-from langchain_community.embeddings import DashScopeEmbeddings
-from langchain_community.document_loaders import CSVLoader
+from langchain_community.embeddings.dashscope import DashScopeEmbeddings
+from langchain_community.document_loaders import CSVLoader, JSONLoader, PyPDFLoader, TextLoader
 from langchain_chroma import Chroma
 
 # 1、数据向量化   方法一
@@ -60,7 +60,7 @@ vector_store.delete(
 # 检索 返回类型list[Document]
 result = vector_store.similarity_search(
     query="python语法是不是好学",
-    k=3,  # 检索的结果要几个
+    k=1,  # 检索的结果要几个
     filter = {"source": "黑马程序员"},
 )
 

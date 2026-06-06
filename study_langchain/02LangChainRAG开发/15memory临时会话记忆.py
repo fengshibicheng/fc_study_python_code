@@ -62,16 +62,16 @@ if __name__ == "__main__":
 
     # 固定格式，添加LangChain的配置，为当前配置的所属的session_id
     session_id = {
-        "configurable":{
-            "session_id": "user_001"
+        "configurable":{      # 第一层：固定key，LangChain识别配置区
+            "session_id": "user_001"    # 第二层：真正存用户编号
         }
     }
 
-    res = conversion.invoke({"input": "小明有2只猫"}, session_id)
+    res = conversion.invoke({"input": "小明有2只猫"}, config = session_id)
     print("第一次提问信息：", res)
 
-    res = conversion.invoke({"input": "小花有1只猫"}, session_id)
+    res = conversion.invoke({"input": "小花有1只猫"}, config = session_id)
     print("第二次提问信息：", res)
 
-    res = conversion.invoke({"input": "一共有几只猫"}, session_id)
+    res = conversion.invoke({"input": "一共有几只猫"}, config = session_id)
     print("第三次提问信息：", res)

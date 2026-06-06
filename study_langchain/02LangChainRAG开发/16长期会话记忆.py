@@ -28,21 +28,23 @@ class FileChatMessageHistory(BaseChatMessageHistory):
     def add_messages(self, messages: Sequence[BaseMessage]) -> None:
         # Sequence序列  类似于元组，列表，tuple。list这样 的序列
         all_message = list(self.messages)   # 已有的消息列表
-        all_message.extend(messages)    # 新的和已有的完成消息列表
+        all_message.extend(messages)    # 新的和已有的完成消息列表  extend是追加messages的多个消息。append只能追加单个消息
 
         new_message = [message_to_dict(message) for message in all_message]  # 列表推导式
-        # 将数据写入文件，打开操作，写入操作
-        file_path = os.path.join(self.storage_id, self.session_id)
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+
         # 将消息字典转换为json数组保存到给定地址中
-        with open(file_path, 'w', encoding='utf-8') as f:
+        # # 将数据写入文件，打开操作，写入操作
+        # file_path = os.path.join(self.storage_id, self.session_id)
+        # os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        # with open(file_path, 'w', encoding='utf-8') as f:
+        with open(self.store_id, 'w', encoding='utf-8') as f:
             json.dump(new_message, f)
 
     def clear(self) -> None:
-        file_path = os.path.join(self.storage_id, self.session_id)
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-
-        with open(file_path, 'w', encoding='utf-8') as f:
+        # file_path = os.path.join(self.storage_id, self.session_id)
+        # os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        # with open(file_path, 'w', encoding='utf-8') as f:
+        with open(self.store_id, 'w', encoding='utf-8') as f:
             json.dump([], f)
 
     @property  # 通过@property装饰器方法，将messages函数变成成员属性
