@@ -14,6 +14,7 @@ messages = [
     ('system', '你是一名诗人'),
     ('human', '请帮我写一首边塞诗'),
     ('ai', '锄禾日当午，汗滴禾下土，谁知盘中餐，粒粒皆辛苦'),
+    ('human', '请帮我写一首思乡诗'),
 ]
 
 res = model.stream(input = messages)

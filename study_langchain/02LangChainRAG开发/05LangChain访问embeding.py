@@ -6,7 +6,7 @@
 @IDE ： PyCharm
 """
 # DashScope 达摩院
-from langchain_community.embeddings import DashScopeEmbeddings
+from langchain_community.embeddings.dashscope import DashScopeEmbeddings
 
 model = DashScopeEmbeddings()
 

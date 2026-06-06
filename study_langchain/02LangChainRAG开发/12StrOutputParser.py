@@ -5,7 +5,7 @@
 @File ： 12StrOutputParser.py
 @IDE ： PyCharm
 """
-from langchain_core.output_parsers import StrOutputParser
+from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_community.chat_models.tongyi import ChatTongyi
 
@@ -18,8 +18,8 @@ parser = StrOutputParser()
 # chain = prompt | model | StrOutputParser | model
 chain = prompt | model  | parser | model
 
-res = chain.invoke({"lastname": "张三", "gender": "男"})
-print(res.content)
+res = chain.invoke(input = {"lastname": "张三", "gender": "男"})
+print(res.content, type(res))
 
 # chain = prompt | model  | parser | model |parser
 # res = chain.invoke({"lastname": "张三", "gender": "男"})

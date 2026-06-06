@@ -23,8 +23,8 @@ res = template.format(lastname="张三", sport="跑步")
 print(res, type(res))
 
 # invoke 函数传入的是 字典的形式 {"k": "v"}
-res1 = template.invoke({"lastname": "李四", "sport": "打乒乓球"})
-print(res1, type(res1))
+res1 = template.invoke(input = {"lastname": "李四", "sport": "打乒乓球"})
+print(res1.text, type(res1))
 
 res2 = template.invoke({"lastname": "李四", "sport": "打乒乓球"}).to_string()
 print(res2, type(res2))

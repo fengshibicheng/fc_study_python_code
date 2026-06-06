@@ -6,11 +6,10 @@
 @IDE ： PyCharm
 """
 # PromptTemplate 通用提示词模版
-from langchain_core.prompts import PromptTemplate
-from langchain_core.prompts import  FewShotPromptTemplate
 from langchain_community.llms.tongyi import Tongyi
+from langchain_core.prompts import PromptTemplate, FewShotPromptTemplate, ChatPromptTemplate
 
-# 示例的模板
+# 1、通用提示词 示例的模板
 example_template = PromptTemplate.from_template("单词： {word}, 反义词：{antonym}")
 
 # 示例数据的动态数据注入，要求是list内部套字典

@@ -26,7 +26,7 @@ history_data = [
 ]
 
 prompt_text = template.invoke({"history": history_data})
-# print(prompt_text.to_string())
+print(prompt_text.to_string())
 
 # model = Tongyi(model = 'qwen-max')
 # res = model.invoke(prompt_text)

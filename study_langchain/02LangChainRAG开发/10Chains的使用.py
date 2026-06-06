@@ -38,5 +38,5 @@ chain = chat_prompt_template | model
 # res = chain.stream({"history": history_data})
 # for chunk in res:
 
-for chunk in chain.stream({"history": history_data}):
+for chunk in chain.stream(input = {"history": history_data}):
     print(chunk.content, end="", flush=True)

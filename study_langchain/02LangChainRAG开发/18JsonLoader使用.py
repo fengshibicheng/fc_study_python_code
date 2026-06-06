@@ -43,5 +43,6 @@ loader2 = JSONLoader(
 )
 
 # 消息加载方式有.load() 以及懒加载 .lazy_load()
-document = loader2.load()
+document = loader1.load()
+print(document[0].metadata)
 print(document)
