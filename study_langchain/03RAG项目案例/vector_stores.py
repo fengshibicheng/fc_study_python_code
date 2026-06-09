@@ -13,8 +13,11 @@ class VectorStoreService(object):
         """
         embedding: 嵌入模型的传入
         """
-        self.embedding = embedding
+        self.embedding = embedding  # 私有成员变量
 
+        # 创建向量类实例。
+        # 在knowledge_base.py文件中的向量类实例作用是： 为了将输入的知识库文本转换为向量类；
+        # 在这里再创建向量类作用：是把用户输入转换为向量类
         self.vector_store = Chroma(
             collection_name=config.collection_name,
             embedding_function=self.embedding,
@@ -25,13 +28,14 @@ class VectorStoreService(object):
         """返回向量检索器，方便加入chain"""
         return self.vector_store.as_retriever(
             search_kwargs = {
-                "k": config.similarity_threshold
+                "k": config.similarity_threshold   #每次检索应该返回几个结果
             }
         )
 
 if __name__ == "__main__":
     from langchain_community.embeddings import  DashScopeEmbeddings
-    retriever = VectorStoreService(DashScopeEmbeddings(model = "text-embedding-v4")).get_retriever()
+    # retriever 检索器
+    retriever = VectorStoreService(DashScopeEmbeddings(model = config.embedding_model_name)).get_retriever()
 
     res = retriever.invoke("我的体重180斤，尺码推荐")
     print(res)

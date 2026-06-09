@@ -23,14 +23,38 @@ def print_prompt(prompt):
 
     return prompt
 
+def format_document(docs: list[Document]):
+        if not docs:
+            return "无相关参考资料"
+
+        formatted_str = ""
+        for doc in docs:
+            formatted_str += f"文档片段：{doc.page_content}\n 文档元数据：{doc.metadata}\n\n"
+
+        return formatted_str
+
+def format_for_retriever(value: dict)->str:
+
+    return value["input"]
+
+def format_for_prompt_template(value):
+    # {input, context, history}
+    new_value = {}
+    new_value["input"] = value["input"]["input"]
+    new_value["context"] = value["context"]
+    new_value["history"] = value["input"]["history"]
+    return new_value
+
 
 class RagService(object):
     def __init__(self):
 
+        # 向量存储
         self.vector_service = VectorStoreService(
             embedding=DashScopeEmbeddings(model=config.embedding_model_name)
         )
 
+        # 提示词模版
         self.prompt_template = ChatPromptTemplate.from_messages(
             [
                 ("system", "以我提供的已知参考资料为主，"
@@ -41,38 +65,20 @@ class RagService(object):
             ]
         )
 
-        self.chat_model = ChatTongyi(model=config.chat_model_name)
+        # 聊天模型
+        self.chat_model = ChatTongyi(model=config.chat_model_name, streaming = True)
 
+        # 链
         self.chain = self.__get_chain()
 
+    # 私有的成员方法
     def __get_chain(self):
         """获取最终的执行链"""
 
+        # 检索器对象
         retriever = self.vector_service.get_retriever()
 
-        def format_document(docs: list[Document]):
-            if not docs:
-                return "无相关参考资料"
-
-            formatted_str = ""
-            for doc in docs:
-                formatted_str += f"文档片段：{doc.page_content}\n文档元数据：{doc.metadata}\n\n"
-
-            return formatted_str
-
-        def format_for_retriever(value: dict)->str:
-
-            return value["input"]
-
-        def format_for_prompt_template(value):
-            # {input, context, history}
-            new_value = {}
-            new_value["input"] = value["input"]["input"]
-            new_value["context"] = value["context"]
-            new_value["history"] = value["input"]["history"]
-            return new_value
-
-
+        # 初始链
         chain = (
             {
                 "input": RunnablePassthrough(),
@@ -80,11 +86,12 @@ class RagService(object):
             }| RunnableLambda(format_for_prompt_template) |self.prompt_template | print_prompt |self.chat_model | StrOutputParser()
         )
 
+        # 对话的历史记录保存
         conversation_chain = RunnableWithMessageHistory(       # 增强的链
-            chain,
-            get_history,
-            input_messages_key="input",
-            history_messages_key="history",
+            chain,   # 被增强的普通链
+            get_history,  # 调用历史记忆
+            input_messages_key="input",  # 用户输入的变量是什么
+            history_messages_key="history",   # 历史消息的占位
         )
 
         return conversation_chain
@@ -97,5 +104,5 @@ if __name__ == '__main__':
             "session_id":"user_001",
         }
     }
-    res = RagService().chain.invoke({"input":"我之前问了什么"},session_config)
+    res = RagService().chain.invoke({"input":"我身高160，应该穿什么尺码"}, session_config)
     print(res)

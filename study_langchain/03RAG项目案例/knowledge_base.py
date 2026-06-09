@@ -51,21 +51,21 @@ class KnowledgeBaseService(object):
         # os.makedirs 表示如果该文件夹不存在，则会创建一个文件夹；如果存在则跳过
         os.makedirs(config.persist_directory, exist_ok=True)
 
-        # 向量存储的实例 Chroma 向量库对象
+        # 一、创建文本分割器的对象
+        self.spliter=RecursiveCharacterTextSplitter(
+            chunk_size=config.chunk_size,       # 分段得到的最大文本数量
+            chunk_overlap=config.chunk_overlap,    # 相邻两段之间允许重叠的文本数量
+            separators=config.separators,       # 文本划分的标准，比如。 ， ！ ？ 这样的字符
+            length_function=len     # 用python自带的统计长度的函数len作为统计文本长度的依据
+        )
+
+        # 二、创建向量存储的实例 Chroma 向量库对象
         self.chroma=Chroma(
             collection_name=config.collection_name,     # 数据库的表名，一般会放到配置文件当中，方便修改
             persist_directory=config.persist_directory,  # 数据库本地存储文件夹
             embedding_function=DashScopeEmbeddings(
             model=config.embedding_model_name,    # 默认是v1，改成v4比较新，效果更好
             ),
-        )
-
-        # 文本分割器的对象
-        self.spliter=RecursiveCharacterTextSplitter(
-            chunk_size=config.chunk_size,       # 分段得到的最大文本数量
-            chunk_overlap=config.chunk_overlap,    # 相邻两段之间允许重叠的文本数量
-            separators=config.separators,       # 文本划分的标准，比如。 ， ！ ？ 这样的字符
-            length_function=len     # 用python自带的统计长度的函数len作为统计文本长度的依据
         )
 
     def upload_by_str(self, data: str, filename):
@@ -88,6 +88,7 @@ class KnowledgeBaseService(object):
             "create_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
             "operator": "小冯",
         }
+
         print("开始写入向量库...")
         # 写入向量库
         self.chroma.add_texts(    # 内容就加载到向量库中了
