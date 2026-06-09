@@ -56,7 +56,7 @@ class KnowledgeBaseService(object):
             collection_name=config.collection_name,     # 数据库的表名，一般会放到配置文件当中，方便修改
             persist_directory=config.persist_directory,  # 数据库本地存储文件夹
             embedding_function=DashScopeEmbeddings(
-            model="text-embedding-v4",    # 默认是v1，改成v4比较新，效果更好
+            model=config.embedding_model_name,    # 默认是v1，改成v4比较新，效果更好
             ),
         )
 
@@ -95,7 +95,6 @@ class KnowledgeBaseService(object):
             texts = knowledge_chunk,
             metadatas=[metadata] * len(knowledge_chunk)
         )
-        print("返回结果：", md5_hex)
 
         # 保存md5
         save_md5(md5_hex)

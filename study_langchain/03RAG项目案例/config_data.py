@@ -19,3 +19,13 @@ max_split_char_number = 1000   # 文本分割的阈值
 
 # 相似度检索
 similarity_threshold = 2  # 检索返回匹配的文档数量
+
+embedding_model_name="text-embedding-v4"
+chat_model_name="qwen3-max"
+
+#
+session_config = {
+    "configurable": {
+        "session_id": "user_001",
+    }
+}

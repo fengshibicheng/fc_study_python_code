@@ -18,3 +18,12 @@
   <img src="pic/pic3.png" >
   在线流程开发结构图
 </p>
+
+
+参考代码地址：
+#### (一)
+https://github.com/lhh737/KnowledgeBase-RAG-LLM-System
+#### (二)
+https://github.com/spidermanismela/RAG-program/tree/main
+#### (三)
+https://github.com/yichunfu5-prog/langchain-rag-agent

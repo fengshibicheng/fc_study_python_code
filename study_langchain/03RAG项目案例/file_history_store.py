@@ -24,6 +24,7 @@ class FileChatMessageHistory(BaseChatMessageHistory):
         self.file_path =os.path.join(self.storage_path,self.session_id)
         # 确保文件夹存在
         os.makedirs(os.path.dirname(self.file_path),exist_ok=True)
+
     def add_messages(self, messages: Sequence[BaseMessage])->None:
         # Sequence序列 类似list \ tuple
         all_messages=list(self.messages) # 已有的消息列表
@@ -37,6 +38,7 @@ class FileChatMessageHistory(BaseChatMessageHistory):
         # 将数据写入文件
         with open(self.file_path,"w",encoding="utf-8")as f:
             json.dump(new_messages,f)
+
     @property     #装饰器将message方法编程成员属性用
     def messages(self)-> list[BaseMessage]:
         # 当前文件内： list[字典]
