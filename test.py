@@ -7,6 +7,6 @@
 """
 
 # test.py
-import streamlit as st
-st.title("测试页面")
-st.write("如果能看到这句话，说明服务启动成功了")
+import onnxruntime
+
+print(onnxruntime.__version__)

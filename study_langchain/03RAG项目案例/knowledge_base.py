@@ -9,9 +9,10 @@ import os
 import config_data as config
 import hashlib
 from langchain_chroma import Chroma
-from langchain_community.embeddings.dashscope import DashScopeEmbeddings
+from langchain_community.embeddings import DashScopeEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from datetime import datetime
+
 
 def check_md5(md5_str: str):
     """
@@ -53,10 +54,10 @@ class KnowledgeBaseService(object):
         # 向量存储的实例 Chroma 向量库对象
         self.chroma=Chroma(
             collection_name=config.collection_name,     # 数据库的表名，一般会放到配置文件当中，方便修改
+            persist_directory=config.persist_directory,  # 数据库本地存储文件夹
             embedding_function=DashScopeEmbeddings(
-                model="text-embedding-v4",    # 默认是v1，改成v4比较新，效果更好
+            model="text-embedding-v4",    # 默认是v1，改成v4比较新，效果更好
             ),
-            persist_directory=config.persist_directory   # 数据库本地存储文件夹
         )
 
         # 文本分割器的对象
@@ -92,16 +93,14 @@ class KnowledgeBaseService(object):
         self.chroma.add_texts(    # 内容就加载到向量库中了
             # iterable -> list \ tuple
             texts = knowledge_chunk,
-            metadatas = [metadata for _ in knowledge_chunk]
+            metadatas=[metadata] * len(knowledge_chunk)
         )
+        print("返回结果：", md5_hex)
 
         # 保存md5
         save_md5(md5_hex)
 
         return "[成功]内容已经成功载入向量库"
-
-
-
 
 if __name__ == "__main__":
     service = KnowledgeBaseService()
