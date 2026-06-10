@@ -7,7 +7,6 @@
 """
 import json, os
 from typing import Sequence
-
 from langchain_core.messages import messages_from_dict, message_to_dict, BaseMessage
 from langchain_core.chat_history import BaseChatMessageHistory
 
@@ -56,12 +55,17 @@ class FileChatMessageHistory(BaseChatMessageHistory):
         except FileNotFoundError:
             return []
 
+def print_prompt(prompt):
+    print("="*20, prompt.to_string(), "="*20)
+    return prompt
+
+def get_history(session_id):
+    return FileChatMessageHistory(session_id, storage_path='./filechatmessages')
 
 from langchain_community.chat_models.tongyi import  ChatTongyi
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableWithMessageHistory
-
 
 # 1、 定义一个模型
 model = ChatTongyi(model = "qwen3-max")
@@ -79,11 +83,6 @@ prompt = ChatPromptTemplate.from_messages(
     ]
 )
 
-
-def print_prompt(prompt):
-    print("="*20, prompt.to_string(), "="*20)
-    return prompt
-
 # 3、输出类型转换
 str_parser = StrOutputParser()
 
@@ -91,9 +90,6 @@ str_parser = StrOutputParser()
 base_chain = prompt | print_prompt | model | str_parser
 
 store = {}  # 定义每个用户历史记录的字典，key就是session，value就是InMemoryChatMessageHistory类对象
-
-def get_history(session_id):
-    return FileChatMessageHistory(session_id, storage_path='./filechatmessages')
 
 # 5、创建一个新的链，增强原有链，自动附加消息  包装带历史记忆的链
 conversion = RunnableWithMessageHistory(

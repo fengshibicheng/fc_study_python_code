@@ -9,8 +9,8 @@ from langchain_community.chat_models.tongyi import ChatTongyi
 from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParse
 # 导入一个临时会话记忆的包
-from langchain_core.runnables.history import RunnableWithMessageHistory
-from langchain_core.chat_history import InMemoryChatMessageHistory
+from langchain_core.runnables.history import RunnableWithMessageHistory  # 记忆绑定包装器
+from langchain_core.chat_history import InMemoryChatMessageHistory  # 专门用来存放一轮轮的用户 / AI 对话消息，程序运行时有效，重启 / 关闭程序数据就清空（非持久化）。
 
 # 1、 定义一个模型
 model = ChatTongyi(model = "qwen3-max")
@@ -35,6 +35,7 @@ def print_prompt(prompt):
 
 # 3、输出类型转换
 str_parser = StrOutputParser()
+json_parser = JsonOutputParse()
 
 # 4、基本链路
 base_chain = prompt | print_prompt | model | str_parser
@@ -55,7 +56,7 @@ conversion = RunnableWithMessageHistory(
     base_chain,  # 增强前的基本链路
     get_history,  # 通过会话ID获取InMemroyChatMessageHistory类对象
     input_messages_key="input",             # 表示用户在输入模版中的占位符
-    history_messages_key="history"     # 表示用户在输入模版中的占位符
+    history_messages_key="history"     # 表示用户在输入模版中的占位符变量名
 )
 
 if __name__ == "__main__":

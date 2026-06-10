@@ -23,11 +23,11 @@ from langchain_community.embeddings.dashscope import DashScopeEmbeddings
 from langchain_community.document_loaders import CSVLoader, JSONLoader, PyPDFLoader, TextLoader
 from langchain_chroma import Chroma
 
-# 1、数据向量化   方法一
+# 1、内存中的数据向量化（不能永久保存）   方法一
 # vector_store = InMemoryVectorStore(
 #     embedding = DashScopeEmbeddings()
 # )
-# 1、数据向量化   方法二
+# 1、外部数据向量化（调用外接向量库，可以永久保存）   方法二
 vector_store = Chroma(
     collection_name="test", # 当前向量存储起个名字，类似数据库的表的名称
     embedding_function=DashScopeEmbeddings(), # 嵌入模型

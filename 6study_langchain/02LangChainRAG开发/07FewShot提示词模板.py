@@ -28,10 +28,20 @@ few_shot_template = FewShotPromptTemplate(
 
 # 实例化提问输出
 prompt_text = few_shot_template.invoke(input = {"input_word": "东"}).to_string()
-print(prompt_text)
+# print(prompt_text)
 
 
 model = Tongyi(mode = "qwen-max")
-res = model.invoke(input = prompt_text)
+# 方法一，直接model.invoke(prompt_text)
+# res = model.invoke(input = prompt_text)
+
+# 方法二，直接model.invoke(few_shot_template.invoke())
+# res = model.invoke(few_shot_template.invoke(input = {"input_word": "南"}).to_string())
+
+# 方法三，
+# res = model.invoke(few_shot_template.invoke({"input_word": "南"}).to_string())
+
+# 方法四，
+res = model.invoke(few_shot_template.invoke({"input_word": "南"}))
 
 print(res)

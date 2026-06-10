@@ -6,9 +6,9 @@
 @IDE ： PyCharm
 """
 # 从langchain核心包core中导入三个常用的提示词模板
-from langchain_core.prompts import PromptTemplate            # 通用提示词模版     支持动态注入信息
-from langchain_core.prompts import FewShotPromptTemplate    # FewShot提示词模版  支持基于模板注入任意数量的示例信息
-from langchain_core.prompts import ChatPromptTemplate       # Chat提示词模版     支持注入任意数量的历史会话信息
+from langchain_core.prompts import PromptTemplate            # 通用提示词模版     支持动态注入信息【一般是一条】
+from langchain_core.prompts import FewShotPromptTemplate    # FewShot提示词模版  支持基于模板 注入【任意数量的示例信息】
+from langchain_core.prompts import ChatPromptTemplate       # Chat提示词模版     支持注入【任意数量的历史会话信息】
 
 """
 PromptTemplate -> StringPromptTemplate -> BasePromptTemplate -> RunnableSerializable ->Runnable

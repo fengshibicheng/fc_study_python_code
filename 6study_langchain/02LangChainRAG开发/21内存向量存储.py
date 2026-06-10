@@ -11,7 +11,7 @@ from langchain_community.document_loaders import CSVLoader
 
 # 文本向量转换器，阿里达摩院
 vector_store = InMemoryVectorStore(
-    embedding = DashScopeEmbeddings()
+    embedding = DashScopeEmbeddings(model = "text-embedding-v4")
 )
 
 # 创建读取csvloader文件读取器
@@ -41,3 +41,8 @@ vector_store.delete(
 result = vector_store.similarity_search(query="python语法是不是好学", k=3)
 
 print(result)
+
+#  打印输出检索的匹配结果
+for doc in result:
+    print(doc.page_content)
+    print('=='*20)

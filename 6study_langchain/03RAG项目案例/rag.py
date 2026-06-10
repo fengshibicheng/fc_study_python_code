@@ -23,6 +23,7 @@ def print_prompt(prompt):
 
     return prompt
 
+# 输出转换为字符串
 def format_document(docs: list[Document]):
         if not docs:
             return "无相关参考资料"
@@ -75,10 +76,10 @@ class RagService(object):
     def __get_chain(self):
         """获取最终的执行链"""
 
-        # 检索器对象
+        # 一、检索器对象（主要是根据用户提问，检索查询到向量库中的参考资料）
         retriever = self.vector_service.get_retriever()
 
-        # 初始链
+        # 二、初始链
         chain = (
             {
                 "input": RunnablePassthrough(),
@@ -86,7 +87,7 @@ class RagService(object):
             }| RunnableLambda(format_for_prompt_template) |self.prompt_template | print_prompt |self.chat_model | StrOutputParser()
         )
 
-        # 对话的历史记录保存
+        # 三。增强链 对话的长期历史记录保存  ****参考【16长期会话记忆.py】*****
         conversation_chain = RunnableWithMessageHistory(       # 增强的链
             chain,   # 被增强的普通链
             get_history,  # 调用历史记忆
@@ -95,7 +96,7 @@ class RagService(object):
         )
 
         return conversation_chain
-
+        # return chain
 
 if __name__ == '__main__':
     # session id 配置
@@ -104,5 +105,6 @@ if __name__ == '__main__':
             "session_id":"user_001",
         }
     }
-    res = RagService().chain.invoke({"input":"我身高160，应该穿什么尺码"}, session_config)
+    res = RagService().chain.invoke({"input":"我身高160，应该穿什么尺码"}, session_config)   # 增强链需要输入的是字典
+    # res = RagService().chain.invoke("我身高160，应该穿什么尺码")
     print(res)

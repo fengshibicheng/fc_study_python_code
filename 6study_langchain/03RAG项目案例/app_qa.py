@@ -9,16 +9,19 @@ import streamlit as  st
 from rag import RagService
 import config_data as config
 import time
+"""
+    基于streamlit框架实现的web网页，运行方式，在对应的项目文件目录中输入：streamlit run app_qa.py
+"""
 
 # 标题
 st.title("智能客服")
 
-# 分隔符
+# 分隔符--------
 st.divider()
 
-# 避免性能压力，session_state 存入对象
+# 避免性能压力，session_state是一个字典 存入对象
 if "message" not in st.session_state:
-    st.session_state["message"]=[{"role":"assistant","content":"你好，有什么可以帮助你？"}]
+    st.session_state["message"]=[{"role": "assistant", "content": "你好，有什么可以帮助你？"}]
 
 if "rag" not in st.session_state:
     st.session_state["rag"]= RagService()
@@ -33,7 +36,7 @@ prompt= st.chat_input()
 if prompt :
     # 在页面输出用户的提问
     st.chat_message("user").write(prompt)
-    st.session_state["message"].append({"role":"user","content":prompt})
+    st.session_state["message"].append({"role": "user", "content": prompt})
 
     ai_res_list= []
     with st.spinner("AI 思考中......."):
@@ -53,7 +56,8 @@ if prompt :
             for chunk in generator:
                 cache_list.append(chunk)
                 yield chunk
-        st.chat_message("assistant").write_stream(capture(res_stream,ai_res_list))
+
+        st.chat_message("assistant").write_stream(capture(res_stream, ai_res_list))
         st.session_state["message"].append({"role": "assistant", "content": "".join(ai_res_list)})
                                                                          # “”.join功能： eg：['a', 'b', 'c', 'd']  -> abcd
                                                                          # “-”.join功能： eg：['a', 'b', 'c', 'd']  -> a-b-c-d

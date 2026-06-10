@@ -52,7 +52,7 @@ class KnowledgeBaseService(object):
         os.makedirs(config.persist_directory, exist_ok=True)
 
         # 一、创建文本分割器的对象
-        self.spliter=RecursiveCharacterTextSplitter(
+        self.spliter=RecursiveCharacterTextSplitter(   #递归文档分割器
             chunk_size=config.chunk_size,       # 分段得到的最大文本数量
             chunk_overlap=config.chunk_overlap,    # 相邻两段之间允许重叠的文本数量
             separators=config.separators,       # 文本划分的标准，比如。 ， ！ ？ 这样的字符
@@ -64,24 +64,27 @@ class KnowledgeBaseService(object):
             collection_name=config.collection_name,     # 数据库的表名，一般会放到配置文件当中，方便修改
             persist_directory=config.persist_directory,  # 数据库本地存储文件夹
             embedding_function=DashScopeEmbeddings(
-            model=config.embedding_model_name,    # 默认是v1，改成v4比较新，效果更好
+                model=config.embedding_model_name,    # 默认是v1，改成v4比较新，效果更好
             ),
         )
 
     def upload_by_str(self, data: str, filename):
         """将传入的字符串，进行向量化，存入向量数据库中"""
-        # 先得到传入字符串的md5值
+
+        # 一、首先得到传入字符串的md5值
         md5_hex = get_string_md5(data)
 
+        # 二、检查传入的md5值，是否存在现有的md5.txt中
         if check_md5(md5_hex):
             return "[跳过]传入文本已经存在向量库中"
 
-        # 文本分片
+        # 三、 对传入字符串文本进行分割切片
         if len(data) > config.max_split_char_number:
             knowledge_chunk: list[str] = self.spliter.split_text(data)
         else:
             knowledge_chunk = [data]
 
+        # 元数据，一般表示文件创建的时间地点之类的
         metadata = {
             "source" : filename,
             # 我们习惯的时间格式是 2026-06-08 10:00：00
@@ -90,14 +93,14 @@ class KnowledgeBaseService(object):
         }
 
         print("开始写入向量库...")
-        # 写入向量库
+        # 四、将分割切片的文本 写入向量库
         self.chroma.add_texts(    # 内容就加载到向量库中了
             # iterable -> list \ tuple
             texts = knowledge_chunk,
             metadatas=[metadata] * len(knowledge_chunk)
         )
 
-        # 保存md5
+        # 五、保存md5值到md5.txt中
         save_md5(md5_hex)
 
         return "[成功]内容已经成功载入向量库"

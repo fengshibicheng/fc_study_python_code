@@ -7,10 +7,10 @@
 """
 """
 ReAct是一种工作范式，定义了大模型的工作流程。
-    思考:分析需求，考虑下一步
-    行动:工具调用获取信息
-    观察:分析获取的信息
-思考>行动观察>思考...>结束
+    思考: 分析需求，考虑下一步
+    行动: 工具调用获取信息
+    观察: 分析获取的信息
+思考->行动->观察->思考...>结束
 LangChain的Agent对象，就是按ReAct模式运行。
 """
 from langchain_community.chat_models.tongyi import ChatTongyi
@@ -35,7 +35,7 @@ agent = create_agent(
 
 
 for chunk in agent.stream(
-    {"messages": [{"role": "user", "content": "计算我的BMI"}]},
+    input = {"messages": [{"role": "user", "content": "计算我的BMI"}]},
     stream_mode="values",
 ):
     latest_message = chunk["messages"][-1]

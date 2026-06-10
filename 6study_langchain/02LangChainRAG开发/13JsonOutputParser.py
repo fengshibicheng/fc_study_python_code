@@ -5,7 +5,7 @@
 @File ： 13JsonOutputParser.py
 @IDE ： PyCharm
 """
-from langchain_core.prompts import PromptTemplate, FewShotPromptTemplate, ChatPromptTemplate
+from langchain_core.prompts import PromptTemplate, FewShotPromptTemplate, ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.output_parsers import StrOutputParser, JsonOutputParser
 from langchain_community.chat_models.tongyi import ChatTongyi
 

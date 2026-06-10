@@ -14,7 +14,7 @@ model = Tongyi(model="qwen-max")
 res = model.stream(input= "你是谁呀，能做什么？")
 
 for chunk in res:
-    print(chunk, end=" ", flush=True)
+    print(chunk, end="", flush=True)
 
 
 

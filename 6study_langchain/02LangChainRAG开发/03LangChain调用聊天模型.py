@@ -21,4 +21,4 @@ messages = [
 res = model.stream(messages)
 
 for chunk in res:
-    print(chunk.content, end=" ", flush=True)
+    print(chunk.content, end="", flush=True)

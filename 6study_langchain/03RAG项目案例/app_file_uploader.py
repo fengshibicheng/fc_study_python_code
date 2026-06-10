@@ -5,6 +5,9 @@
 @File ： app_file_uploader.py
 @IDE ： PyCharm
 """
+"""
+    基于streamlit框架实现的web网页，运行方式，在对应的项目文件目录中输入：streamlit run app_file_uploader.py
+"""
 # 基于Streamlit 完成WEB网页上传服务
 # Streamlit特点：当WEB页面发生变化时，则代码重新执行一遍
 import time
