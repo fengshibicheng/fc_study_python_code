@@ -15,8 +15,9 @@ def get_history(session_id):
     return FileChatMessageHistory(session_id, "./chat_history")
 
 class FileChatMessageHistory(BaseChatMessageHistory):
+    """每次会话存为一个 JSON 文件，按 session_id 隔离"""
 
-    def __init__(self, session_id, storage_path):
+    def __init__(self, session_id: str, storage_path: str):
         self.session_id=session_id
         self.storage_path=storage_path
         # 完整的文件路径

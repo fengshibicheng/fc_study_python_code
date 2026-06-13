@@ -2,12 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b5a7092-e57e-4747-acd4-4d898161eb99" name="变更" comment="2026/6/10/16:25">
-      <change afterPath="$PROJECT_DIR$/.idea/csv-plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5e081694-28a6-4d60-94c6-632bc8df369c.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/chat_history/user_001" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ignore" beforeDir="false" afterPath="$PROJECT_DIR$/.ignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/config/agent.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/config/chroma.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/config/prompts.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/config/rag.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/logs/agent_20260613.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/prompts/main_prompt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/prompts/rag_summarize.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/prompts/report_prompt.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/path_tool.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/file_history_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/file_history_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/knowledge_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/knowledge_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/README_Agent案例一.md" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/README_Agent案例一.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/model/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/model/factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/config_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/config_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/file_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/file_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/logger_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/logger_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/path_tools.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/prompt_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/prompt_loader.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +61,8 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/fc_study_code/study_langchain/05RAG项目实战/pic&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/my_study_code/langchain-rag-agent-main&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -58,8 +73,8 @@
       <recent name="D:\fc_study_code\study_langchain\03RAG项目案例" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.02Agent的stream流式输出">
-    <configuration name="01Agent智能体初体验" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.prompt_loader">
+    <configuration name="01测试apikey的使用" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fc_study_code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -67,12 +82,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/6study_langchain/04Agent智能体" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/6study_langchain/01基础OpenAI" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6study_langchain/04Agent智能体/01Agent智能体初体验.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6study_langchain/01基础OpenAI/01测试apikey的使用.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -81,29 +96,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="02Agent的stream流式输出" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="fc_study_code" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/6study_langchain/04Agent智能体" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6study_langchain/04Agent智能体/02Agent的stream流式输出.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="23向量检索构建提示词" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="20PDFLoader的简单使用" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fc_study_code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,7 +109,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/23向量检索构建提示词.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/20PDFLoader的简单使用.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -125,7 +118,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="rag" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="config_handler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fc_study_code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,12 +126,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/6study_langchain/03RAG项目案例" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6study_langchain/03RAG项目案例/rag.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/config_handler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="vector_stores" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="path_tool" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="fc_study_code" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -155,12 +148,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/6study_langchain/03RAG项目案例" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6study_langchain/03RAG项目案例/vector_stores.py" />
+      <option name="SCRIPT_NAME" value="D:\fc_study_code\6study_langchain\05RAG项目实战\utils\path_tool.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="prompt_loader" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="fc_study_code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/prompt_loader.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -171,11 +186,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.02Agent的stream流式输出" />
-        <item itemvalue="Python.01Agent智能体初体验" />
-        <item itemvalue="Python.rag" />
-        <item itemvalue="Python.vector_stores" />
-        <item itemvalue="Python.23向量检索构建提示词" />
+        <item itemvalue="Python.prompt_loader" />
+        <item itemvalue="Python.config_handler" />
+        <item itemvalue="Python.path_tools" />
+        <item itemvalue="Python.20PDFLoader的简单使用" />
+        <item itemvalue="Python.01测试apikey的使用" />
       </list>
     </recent_temporary>
   </component>
@@ -207,7 +222,14 @@
       <workItem from="1780985898374" duration="9840000" />
       <workItem from="1781008189762" duration="6176000" />
       <workItem from="1781057345288" duration="7417000" />
-      <workItem from="1781072446038" duration="7804000" />
+      <workItem from="1781072446038" duration="7971000" />
+      <workItem from="1781080866371" duration="2977000" />
+      <workItem from="1781094470400" duration="1303000" />
+      <workItem from="1781144526937" duration="609000" />
+      <workItem from="1781155248180" duration="606000" />
+      <workItem from="1781231620906" duration="5868000" />
+      <workItem from="1781247549585" duration="3164000" />
+      <workItem from="1781313662814" duration="7772000" />
     </task>
     <task id="LOCAL-00001" summary="2026/6/3/18:38">
       <created>1780483105157</created>
@@ -313,6 +335,9 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.log" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -350,14 +375,17 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/fc_study_code$app_file_uploader.coverage" NAME="app_file_uploader 覆盖结果" MODIFIED="1780801662234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study_langchain/03RAG项目案例" />
+    <SUITE FILE_PATH="coverage/fc_study_code$prompt_loader.coverage" NAME="prompt_loader 覆盖结果" MODIFIED="1781321697086" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils" />
     <SUITE FILE_PATH="coverage/fc_study_code$18JsonLoader.coverage" NAME="18JsonLoader使用 覆盖结果" MODIFIED="1780732004163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$04middleware.coverage" NAME="04middleware中间件使用 覆盖结果" MODIFIED="1781015023046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study_langchain/04Agent智能体" />
     <SUITE FILE_PATH="coverage/fc_study_code$19TextLoader.coverage" NAME="19TextLoader和文档分割器 覆盖结果" MODIFIED="1781061398120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$17Document.coverage" NAME="17Document文档加载器 覆盖结果" MODIFIED="1780731825838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$test.coverage" NAME="test 覆盖结果" MODIFIED="1780974609841" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/fc_study_code$config_handler.coverage" NAME="config_handler 覆盖结果" MODIFIED="1781318140359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils" />
     <SUITE FILE_PATH="coverage/fc_study_code$23.coverage" NAME="23向量检索构建提示词 覆盖结果" MODIFIED="1781063345903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$04OpenAI.coverage" NAME="04OpenAI调用历史消息 覆盖结果" MODIFIED="1781057636249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/01基础OpenAI" />
     <SUITE FILE_PATH="coverage/fc_study_code$09ChatPromptTemplate.coverage" NAME="09ChatPromptTemplate的使用 覆盖结果" MODIFIED="1781059248577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发" />
+    <SUITE FILE_PATH="coverage/fc_study_code$path_tools.coverage" NAME="path_tools 覆盖结果" MODIFIED="1781314226154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils" />
     <SUITE FILE_PATH="coverage/fc_study_code$21.coverage" NAME="21内存向量存储 覆盖结果" MODIFIED="1781062616153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$07FewShot.coverage" NAME="07FewShot提示词模板 覆盖结果" MODIFIED="1781058550304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$03LangChain.coverage" NAME="03LangChain调用聊天模型 覆盖结果" MODIFIED="1781057931377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发" />
@@ -369,7 +397,7 @@
     <SUITE FILE_PATH="coverage/fc_study_code$01Agent.coverage" NAME="01Agent智能体初体验 覆盖结果" MODIFIED="1781078764747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/04Agent智能体" />
     <SUITE FILE_PATH="coverage/fc_study_code$12StrOutputParser.coverage" NAME="12StrOutputParser 覆盖结果" MODIFIED="1781059620272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$02Agentstream.coverage" NAME="02Agent的stream流式输出 覆盖结果" MODIFIED="1781078943497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/04Agent智能体" />
-    <SUITE FILE_PATH="coverage/fc_study_code$20PDFLoader.coverage" NAME="20PDFLoader的简单使用 覆盖结果" MODIFIED="1781061450344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发" />
+    <SUITE FILE_PATH="coverage/fc_study_code$20PDFLoader.coverage" NAME="20PDFLoader的简单使用 覆盖结果" MODIFIED="1781237574127" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$02LangChain.coverage" NAME="02LangChain流式输出结果 覆盖结果" MODIFIED="1781057757463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$08formatinvoke.coverage" NAME="08模版类的format和invoke方法对比 覆盖结果" MODIFIED="1780715367420" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$24RunnablePassthrough.coverage" NAME="24RunnablePassthrough的使用 覆盖结果" MODIFIED="1780734842816" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study_langchain/02LangChainRAG开发" />
@@ -378,7 +406,7 @@
     <SUITE FILE_PATH="coverage/fc_study_code$04LangChain.coverage" NAME="04LangChain聊天消息简写模式 覆盖结果" MODIFIED="1780712097898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$22.coverage" NAME="22外部向量持久化存储 覆盖结果" MODIFIED="1780733141286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/study_langchain/02LangChainRAG开发" />
     <SUITE FILE_PATH="coverage/fc_study_code$rag.coverage" NAME="rag 覆盖结果" MODIFIED="1781076972971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/03RAG项目案例" />
-    <SUITE FILE_PATH="coverage/fc_study_code$01apikey.coverage" NAME="01测试apikey的使用 覆盖结果" MODIFIED="1781057418714" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/01基础OpenAI" />
+    <SUITE FILE_PATH="coverage/fc_study_code$01apikey.coverage" NAME="01测试apikey的使用 覆盖结果" MODIFIED="1781233769494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/01基础OpenAI" />
     <SUITE FILE_PATH="coverage/fc_study_code$vector_stores.coverage" NAME="vector_stores 覆盖结果" MODIFIED="1781074524904" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/6study_langchain/03RAG项目案例" />
   </component>
 </project>

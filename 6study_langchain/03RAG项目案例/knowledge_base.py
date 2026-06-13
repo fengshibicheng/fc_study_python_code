@@ -6,12 +6,15 @@
 @IDE ： PyCharm
 """
 import os
-import config_data as config
 import hashlib
+from datetime import datetime
+
+import config_data as config
+
 from langchain_chroma import Chroma
 from langchain_community.embeddings import DashScopeEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from datetime import datetime
+
 
 
 def check_md5(md5_str: str):
