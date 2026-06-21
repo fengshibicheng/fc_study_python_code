@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/6/3
-@Auth ： 冯成
+@Auth ： fc
 @File ： 20PDFLoader的简单使用.py
 @IDE ： PyCharm
 """

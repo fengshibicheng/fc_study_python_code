@@ -1,14 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b5a7092-e57e-4747-acd4-4d898161eb99" name="变更" comment="2026/6/13/11:45">
+    <list default="true" id="2b5a7092-e57e-4747-acd4-4d898161eb99" name="变更" comment="2026/6/17/19:32">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/config/chroma.yml" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/config/chroma.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/model/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/model/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/rag/vector_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/rag/vector_store.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/config_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/config_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/file_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/file_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/logger_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/05RAG项目实战/utils/logger_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3study_torch/s1.py" beforeDir="false" afterPath="$PROJECT_DIR$/3study_torch/s1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3study_torch/s3.py" beforeDir="false" afterPath="$PROJECT_DIR$/3study_torch/s3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3study_torch/s4.py" beforeDir="false" afterPath="$PROJECT_DIR$/3study_torch/s4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4 python control program/4.1.if.py" beforeDir="false" afterPath="$PROJECT_DIR$/4 python control program/4.1.if.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4 python control program/4.2 for.py" beforeDir="false" afterPath="$PROJECT_DIR$/4 python control program/4.2 for.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4 python control program/6. 模块.py" beforeDir="false" afterPath="$PROJECT_DIR$/4 python control program/6. 模块.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4 python control program/平方根.py" beforeDir="false" afterPath="$PROJECT_DIR$/4 python control program/平方根.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4 python control program/数字求和.py" beforeDir="false" afterPath="$PROJECT_DIR$/4 python control program/数字求和.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4 python control program/面向对象.py" beforeDir="false" afterPath="$PROJECT_DIR$/4 python control program/面向对象.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/5study_python/9.二分排序法.py" beforeDir="false" afterPath="$PROJECT_DIR$/5study_python/9.二分排序法.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/01测试apikey的使用.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/01测试apikey的使用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/02OpenAI库的基础使用.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/02OpenAI库的基础使用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/03OpenAI流式输出.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/03OpenAI流式输出.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/04OpenAI调用历史消息.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/04OpenAI调用历史消息.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/05提示词优化案例_金融文本分类.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/05提示词优化案例_金融文本分类.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/06Json的基础使用.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/01基础OpenAI/06Json的基础使用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/01LangChain访问阿里通义千问大模型.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/01LangChain访问阿里通义千问大模型.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/02LangChain流式输出结果.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/02LangChain流式输出结果.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/03LangChain调用聊天模型.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/03LangChain调用聊天模型.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/04LangChain聊天消息简写模式.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/04LangChain聊天消息简写模式.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/05LangChain访问embeding.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/05LangChain访问embeding.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/06LangChain通用提示词模版.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/06LangChain通用提示词模版.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/07FewShot提示词模板.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/07FewShot提示词模板.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/08模版类的format和invoke方法对比.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/08模版类的format和invoke方法对比.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/09ChatPromptTemplate的使用.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/09ChatPromptTemplate的使用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/10Chains的使用.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/10Chains的使用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/11.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/11扩展python或运算法的重写.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/11扩展python或运算法的重写.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/12StrOutputParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/12StrOutputParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/13JsonOutputParser.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/13JsonOutputParser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/14Runnablelambda函数的基础使用.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/14Runnablelambda函数的基础使用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/15memory临时会话记忆.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/15memory临时会话记忆.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/16长期会话记忆.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/16长期会话记忆.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/17Document文档加载器.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/17Document文档加载器.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/18JsonLoader使用.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/18JsonLoader使用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/19TextLoader和文档分割器.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/19TextLoader和文档分割器.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/20PDFLoader的简单使用.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/20PDFLoader的简单使用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/21内存向量存储.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/21内存向量存储.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/22外部向量持久化存储.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/22外部向量持久化存储.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/23向量检索构建提示词.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/23向量检索构建提示词.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/24RunnablePassthrough的使用.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/02LangChainRAG开发/24RunnablePassthrough的使用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/app_file_uploader.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/app_file_uploader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/app_qa.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/app_qa.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/config_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/config_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/file_history_store.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/file_history_store.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/knowledge_base.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/knowledge_base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/rag.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/rag.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/vector_stores.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/03RAG项目案例/vector_stores.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/04Agent智能体/01Agent智能体初体验.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/04Agent智能体/01Agent智能体初体验.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/04Agent智能体/02Agent的stream流式输出.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/04Agent智能体/02Agent的stream流式输出.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/04Agent智能体/03React案例.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/04Agent智能体/03React案例.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/6study_langchain/04Agent智能体/04middleware中间件使用.py" beforeDir="false" afterPath="$PROJECT_DIR$/6study_langchain/04Agent智能体/04middleware中间件使用.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +95,7 @@
     &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/my_study_code/langchain-rag-agent-main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/langchain_agent_study&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
@@ -220,6 +267,10 @@
       <workItem from="1781608333269" duration="7137000" />
       <workItem from="1781695457405" duration="134000" />
       <workItem from="1781695628072" duration="221000" />
+      <workItem from="1781695910325" duration="1148000" />
+      <workItem from="1781955227211" duration="1222000" />
+      <workItem from="1782010252016" duration="3000" />
+      <workItem from="1782015048559" duration="334000" />
     </task>
     <task id="LOCAL-00001" summary="2026/6/3/18:38">
       <created>1780483105157</created>
@@ -326,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1781322350021</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="2026/6/17/19:32">
+      <created>1781695971979</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1781695971979</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,7 +420,8 @@
     <MESSAGE value="2026/6/9/22:32" />
     <MESSAGE value="2026/6/10/16:25" />
     <MESSAGE value="2026/6/13/11:45" />
-    <option name="LAST_COMMIT_MESSAGE" value="2026/6/13/11:45" />
+    <MESSAGE value="2026/6/17/19:32" />
+    <option name="LAST_COMMIT_MESSAGE" value="2026/6/17/19:32" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

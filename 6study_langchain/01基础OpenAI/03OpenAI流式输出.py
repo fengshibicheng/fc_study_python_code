@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/5/29
-@Auth ： 冯成
+@Auth ： fc
 @File ： 03OpenAI流式输出.py
 @IDE ： PyCharm
 """

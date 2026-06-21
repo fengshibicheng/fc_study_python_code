@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/6/9
-@Auth ： 冯成
+@Auth ： fc
 @File ： 01Agent智能体初体验.py
 @IDE ： PyCharm
 """

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/6/1
-@Auth ： 冯成
+@Auth ： fc
 @File ： 07FewShot提示词模板.py
 @IDE ： PyCharm
 """

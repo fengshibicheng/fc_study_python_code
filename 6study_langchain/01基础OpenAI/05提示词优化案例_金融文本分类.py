@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/5/29
-@Auth ： 冯成
+@Auth ： fc
 @File ： 05提示词优化案例_金融文本分类.py
 @IDE ： PyCharm
 """

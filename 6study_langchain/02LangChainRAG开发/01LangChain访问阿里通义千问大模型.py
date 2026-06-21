@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/5/29
-@Auth ： 冯成
+@Auth ： fc
 @File ： 01LangChain访问阿里通义千问大模型.py
 @IDE ： PyCharm
 """

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/5/10
-@Auth ： 冯成
+@Auth ： fc
 @File ： 4.1.if.py
 @IDE ： PyCharm
 """

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/6/2
-@Auth ： 冯成
+@Auth ： fc
 @File ： 10Chains的使用.py
 @IDE ： PyCharm
 """

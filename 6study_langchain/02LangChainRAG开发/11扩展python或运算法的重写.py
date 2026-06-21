@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/6/2
-@Auth ： 冯成
+@Auth ： fc
 @File ： 11扩展python或运算法的重写.py
 @IDE ： PyCharm
 """

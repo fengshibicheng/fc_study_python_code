@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/6/1
-@Auth ： 冯成
+@Auth ： fc
 @File ： 02LangChain流式输出结果.py
 @IDE ： PyCharm
 """

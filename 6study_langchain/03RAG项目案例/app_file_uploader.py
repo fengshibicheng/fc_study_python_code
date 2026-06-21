@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/6/6
-@Auth ： 冯成
+@Auth ： fc
 @File ： app_file_uploader.py
 @IDE ： PyCharm
 """

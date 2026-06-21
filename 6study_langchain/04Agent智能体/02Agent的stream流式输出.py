@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/6/9
-@Auth ： 冯成
+@Auth ： fc
 @File ： 02Agent的stream流式输出.py
 @IDE ： PyCharm
 """

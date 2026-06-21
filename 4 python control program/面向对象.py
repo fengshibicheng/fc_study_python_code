@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/5/13
-@Auth ： 冯成
+@Auth ： fc
 @File ： 面向对象.py
 @IDE ： PyCharm
 """

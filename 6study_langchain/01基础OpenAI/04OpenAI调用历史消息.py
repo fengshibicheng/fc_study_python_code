@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/5/29
-@Auth ： 冯成
+@Auth ： fc
 @File ： 04OpenAI调用历史消息.py
 @IDE ： PyCharm
 """

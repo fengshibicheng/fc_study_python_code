@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/6/4
-@Auth ： 冯成
+@Auth ： fc
 @File ： 23向量检索构建提示词.py
 @IDE ： PyCharm
 """

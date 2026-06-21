@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 @Time ： 2026/6/3
-@Auth ： 冯成
+@Auth ： fc
 @File ： 21内存向量存储.py
 @IDE ： PyCharm
 """
